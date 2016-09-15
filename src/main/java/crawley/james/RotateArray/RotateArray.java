@@ -1,17 +1,13 @@
 package crawley.james.RotateArray;
 
-import java.util.*;
-
 /**
- * Created by jamescrawley on 9/14/16.
+ * Created by jamescrawley on 9/15/16.
  */
-public abstract class RotateArray implements List {
+public class RotateArray {
 
+    public static void main (String[] main) {
 
-
-    public static void main(String[] args) {
-
-        ArrayList<Integer> list0 = new ArrayList<Integer>();
+        RotatableArray list0 = new RotatableArray();
 
         list0.add(1);
         list0.add(3);
@@ -21,25 +17,8 @@ public abstract class RotateArray implements List {
         list0.add(11);
 
         System.out.println(list0);
-        RotateArray.shift(list0, 3);
+        RotatableArray.shift(list0, 3);
         System.out.println(list0);
 
-
     }
-
-    public static ArrayList<Integer> shift (ArrayList<Integer> arrList, int k) {
-
-        for (int i = 0; i < k; i++) {
-            arrList.add(arrList.get(i));
-        }
-
-
-        for (int i = 0; i < k; i++) {
-            arrList.remove(0);
-
-        }
-
-        return null;
-    }
-
 }
